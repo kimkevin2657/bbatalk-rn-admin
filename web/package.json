@@ -1,0 +1,63 @@
+{
+  "name": "web",
+  "version": "0.0.1",
+  "description": "A Quasar Framework app",
+  "productName": "IHC 회원 관리 프로그램",
+  "author": "DESKTOP-G808T45\\rafal <programrubber@gmail.com>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "dev": "quasar dev",
+    "build": "quasar build"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.9.11",
+    "apexcharts": "^3.23.1",
+    "apollo-cache-inmemory": "^1.6.5",
+    "apollo-client": "^2.6.8",
+    "apollo-link": "^1.2.14",
+    "apollo-link-error": "^1.1.13",
+    "apollo-link-http": "^1.5.17",
+    "axios": "^0.18.1",
+    "chart.js": "^2.8.0",
+    "core-js": "^3.8.1",
+    "graphql": "^14.6.0",
+    "graphql-tag": "^2.10.3",
+    "moment": "^2.24.0",
+    "q-colorize-mixin": "^1.0.6",
+    "q-theme-mixin": "^1.0.1",
+    "quasar": "^1.14.7",
+    "vee-validate": "^2.2.15",
+    "vue-advanced-cropper": "^0.13.2",
+    "vue-apexcharts": "^1.6.0",
+    "vue-apollo": "^3.0.3",
+    "vue-chartjs": "^3.4.2",
+    "vue-echarts-v3": "^2.0.1",
+    "vue-i18n": "^8.17.4"
+  },
+  "devDependencies": {
+    "@quasar/app": "^2.1.11",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "workbox-webpack-plugin": "^5.1.4"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ]
+}

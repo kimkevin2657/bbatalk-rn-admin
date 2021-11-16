@@ -1,0 +1,42 @@
+name: WebBuild
+#on: [push]
+#on: # 이벤트 감지
+#  push:
+#    paths: 
+#      - 'web/*'
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        mkdir dist
+        cd web
+        npm ci
+        npm run build
+        echo "빌드에 성공하였습니다."
+      env:
+        CI: true
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: master
+        FOLDER: web/dist/spa
+        TARGET_FOLDER: server/dist
+        CLEAN: true

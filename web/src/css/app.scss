@@ -1,0 +1,273 @@
+// app global css in Sass form
+// @font-face {
+// 	font-weight: normal;
+// 	font-style: normal;
+// 	font-family: 'SpoqaHanSans';
+// 	src: local(" "), url("./fonts/SpoqaHanSansRegular.ttf") format("truetype");
+// }
+@font-face {
+    font-family: 'SpoqaHanSans';
+    font-weight: normal;
+    font-style: normal;
+    src: local('Spoqa Han Sans Regular'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.ttf') format('truetype');
+}
+// @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+// * { font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif}
+* { font-family: -apple-system,BlinkMacSystemFont,'Spoqa Han Sans', Arial, Helvetica, sans-serif;}
+// * { font-family: 'Spoqa Han Sans', Arial, Helvetica, sans-serif;}
+body {
+  background-color: #fafafa;
+}
+
+// 블록 막기
+.none-select {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.auto-title {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 300;
+  padding: 5px 0;
+  margin: 20px 0;
+  border-bottom: 1px solid #000;
+}
+// 인증 관련 스타일
+.auth-grid-container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  height: 100vh;
+}
+.auth-gird-header {
+}
+
+.auth-grid-title {
+}
+
+.auth-grid-body {
+  display: grid;
+  @media screen and (min-width: 769px) {
+    /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
+    grid-template-columns: auto 600px auto;
+    margin: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+    grid-template-columns: 0 auto 0;
+  }
+  .auth-grid-center {
+    @media screen and (min-width: 769px) {
+      // 데탑
+    }
+    @media screen and (max-width: 768px) {
+      // 모바일
+      max-width: 100vw;
+    }
+    q-card {
+      padding: 15px;
+    }
+  }
+}
+.auth-grid-footer {
+}
+
+.auth-form-box {
+  background-color: #e0e0e033;
+  @media screen and (min-width: 769px) {
+    /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
+    padding: 0 40px 10px 40px;
+  }
+  @media screen and (max-width: 768px) {
+    /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+    padding: 0;
+  }
+}
+// 인증 관련 스타일-end
+
+// 문의 관련 스타일
+.contact-surveytitle {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 5px 0;
+  margin: 20px 0;
+  //border-bottom: 1px solid #000;
+}
+
+.contact-grid-container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  height: 100vh;
+}
+.contact-gird-header {
+}
+
+.contact-grid-rows {
+  display: grid;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px 10px;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+}
+
+.contact-grid-inputrows {
+  display: grid;
+  margin: 10px 10px;
+  grid-template-columns: auto 100px;
+  grid-gap: 10px;
+}
+
+.contact-grid-textrows {
+  display: grid;
+  margin: 10px 10px;
+  grid-template-columns: auto;
+  //grid-gap: 10px;
+}
+
+.contact-section {
+  border: 1px solid #e4e4e5;
+}
+
+.contact-grid-body {
+  display: grid;
+  @media screen and (min-width: 769px) {
+    /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
+    grid-template-columns: auto 600px auto;
+    margin: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+    grid-template-columns: 0 auto 0;
+  }
+  .contact-grid-center {
+    @media screen and (min-width: 769px) {
+      // 데탑
+    }
+    @media screen and (max-width: 768px) {
+      // 모바일
+      max-width: 100vw;
+    }
+    q-card {
+      padding: 15px;
+    }
+  }
+}
+// 문의 관련 스타일-end
+
+// GroupToolBar
+.page-header-btn-group {float: left; margin-right: 20px; padding-right: 20px;}
+.page-header-btn-group::after { content: ""; border-right:1px solid #9ab2d1 !important; height: 12px; display:inline-block; margin: 0px 20px; position:absolute; top:10px;}
+.page-header-btn-group-last {float: left;}
+.page-header-btn-group-left {position:fixed; left:500px;}
+
+// 일정
+// 블루
+.f-color-blue {
+  border-left: 2px solid rgb(71, 178, 247);
+  border-bottom: 1px solid rgb(71, 178, 247);
+  background-color: rgba(71, 178, 247, 0.08);
+}
+.f-color-blue:hover {
+  background-color: rgb(227, 243, 254);
+}
+// 그린
+.f-color-green {
+  border-left: 2px solid rgb(46, 204, 135);
+  border-bottom: 1px solid rgb(46, 204, 135);
+  background-color: rgba(46, 204, 135, 0.08);
+}
+.f-color-green:hover {
+  background-color: rgb(224, 247, 237);
+}
+//블랙
+.f-color-black {
+  border-left: 2px solid rgb(33, 33, 33);
+  border-bottom: 1px solid rgb(33, 33, 33);
+  background-color: rgba(33, 33, 33, 0.08);
+}
+.f-color-black:hover {
+  background-color: rgb(222, 222, 222);
+}
+// 레드
+.f-color-red {
+  border-left: 2px solid rgb(231, 59, 59);
+  border-bottom: 1px solid rgb(231, 59, 59);
+  background-color: rgba(231, 59, 59, 0.08);
+}
+.f-color-red:hover {
+  background-color: rgb(251, 226, 226);
+}
+
+// AgreeDialog
+.dialog-stepper .q-stepper__step-inner {padding: 0px 0px 0px 0px;}
+
+// Legend Circle: 범례
+.legend-primary {
+  background: #456BD9;
+  display: inline-block;
+  border: 1px;
+  height: 10px;
+  width: 5px;
+  margin-left: 5px;
+}
+
+.legend-negative {
+  background: #c10015;
+  display: inline-block;
+  border: 1px;
+  height: 10px;
+  width: 5px;
+  margin-left: 5px;
+}
+
+.legend-secondary {
+  background: #26a69a;
+  display: inline-block;
+  border: 1px;
+  height: 10px;
+  width: 5px;
+  margin-left: 5px;
+}
+
+.legend-green {
+  background: #4CAF50;
+  display: inline-block;
+  border: 1px;
+  height: 10px;
+  width: 5px;
+  margin-left: 5px;
+}
+
+// 상태 디자인
+.condition-box {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.form-row {
+  background: rgba(255, 255, 255, 1);
+  border: 1px;
+  border-style: solid;
+  border-color: rgba(122, 122, 124, 0.2);
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 10px;
+}
+// widget
+.widget {
+  min-height: 300px !important;
+  max-height: 320px !important;
+}
+.widget-title {
+  font-size: 14px;
+  color: #616f80;
+  font-family: inherit;
+  font-weight: 500;
+  text-transform: uppercase;
+}

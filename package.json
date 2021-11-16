@@ -1,0 +1,11 @@
+{
+  "name": "nopeople",
+  "version": "0.0.1",
+  "description": "IHC 회원 괸라 프로그램",
+  "productName": "IHC 회원 관리 프로그램",
+  "cordovaId": "org.cordova.quasar.app",
+  "author": "programrubber <programrubber@gmail.com>",
+  "private": true,
+  "scripts": {
+  }
+}
